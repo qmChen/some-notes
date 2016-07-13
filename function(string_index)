@@ -3,11 +3,11 @@ int strindex(char s[],char t[])
 {
     int i,j,k;
 
-    for (i = 0;s[i] != '\0';i++ ){
-        for (j = i,k = 0; t[k] != '\0' && s[j] == t[k];j++,k++)
+    for (i = 0;s[i] != '\0';i++ ){      //i = 0 means the searching work starts from the first char
+        for (j = i,k = 0; t[k] != '\0' && s[j] == t[k];j++,k++)    // j = i means the new scanning start 
             ;
         if (k > 0 && t[k] == '\0')
-            return i;
+            return i;                         //the position in string s
     }
-    return -1；
+    return -1；                              //default ooperation when there is no t[]
 }
